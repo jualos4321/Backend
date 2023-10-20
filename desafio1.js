@@ -23,8 +23,13 @@ class productmananger {
         this.products.forEach(products => console.log(products))
     }
 
-    getProductById () {
-        //no como hacerlo
+    getProductById (id) {
+        this.products.find (products => products.id === id)
+        if(id != id){
+            console.log("not found")
+        }else{
+            console.log(this.products.id)
+        }
     }
 }
 
