@@ -1,20 +1,21 @@
 const express = require('express');
+const productManager = new ProductManager('../products.txt')
 
 const PORT = 8080
 
 const app = express()
 app.use(express.urlencoded({ extended: true }))
 app.get('/product', async (req, res) => {
-   await getproducts()
-   res.send(getproducts())
+   const products = await productManager.getproducts()
+   res.send(products)
    if(req.query.limit = 10){
-    res.send(getproducts())
+    res.send(products)
    }else{
-    res.send(getproducts().slice(11, 100))
+    res.send(products.slice(11, 100))
    }
 })
 
-app.get('/product/:id', async (req, res) => {
+app.get('/products/:id', async (req, res) => {
    res.send(req.params.id.find(req => req.id === id)) 
 })
 
