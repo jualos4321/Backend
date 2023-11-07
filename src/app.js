@@ -1,10 +1,13 @@
-const express = require('express');
-const productManager = new productManager('../productMananger.js')
-
+import express from 'express'
+const productManager = new productManager('../products.txt')
 const PORT = 8080
 
 const app = express()
+
 app.use(express.urlencoded({ extended: true }))
+app.get('/', (req,res) =>{
+   res.send("hola")
+})
 app.get('/product', async (req, res) => {
    const products = await productManager.getproducts()
    res.send(products)

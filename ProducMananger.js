@@ -1,5 +1,6 @@
 const fs = require('fs')
 
+
 class productmananger {
     static contadorDeProductos = 0
     constructor() {
