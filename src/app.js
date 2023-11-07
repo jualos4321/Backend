@@ -1,5 +1,5 @@
 const express = require('express');
-const productManager = new ProductManager('../products.txt')
+const productManager = new productManager('../productMananger.js')
 
 const PORT = 8080
 

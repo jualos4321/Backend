@@ -53,3 +53,5 @@ async getProductById (id) {
         this.products.slice (0,10)
     }
 }
+
+module.export = productmananger-->(productmananger)
