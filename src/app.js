@@ -1,5 +1,5 @@
 import express from 'express'
-const productManager = new productManager('../products.txt')
+import productManager from './producMananger'
 const PORT = 8080
 
 const app = express()
